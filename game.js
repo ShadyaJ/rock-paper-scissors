@@ -32,12 +32,12 @@ function playGame() {
 
     const playRound = (humanChoice, computerChoice) => {
         if(humanChoice === computerChoice) {
-            console.log(`Both chose ${humanChoice}. It\'s a tie! No one wins.`);
+            alert(`Both chose ${humanChoice}. It\'s a tie! No one wins.`);
         } else if((humanChoice == 'ROCK' && computerChoice == 'SCISSORS') || (humanChoice == 'PAPER' && computerChoice == 'ROCK') || (humanChoice == 'SCISSORS' && computerChoice == 'PAPER')) {
-            console.log(`Human chose ${humanChoice} and computer chose ${computerChoice}. Human wins!`);
+            alert(`Human chose ${humanChoice} and computer chose ${computerChoice}. Human wins!`);
             humanScore += 1;
         } else {
-            console.log(`Human chose ${humanChoice} and computer chose ${computerChoice}. Computer wins!`);
+            alert(`Human chose ${humanChoice} and computer chose ${computerChoice}. Computer wins!`);
             computerScore += 1;
         }
     }
@@ -48,7 +48,7 @@ function playGame() {
 
         // Stop the game if user cancels prompt
         if (humanChoice === null) {
-            console.log("Game canceled by the user.");
+            alert("Game canceled by the user.");
             return;
         }
     
@@ -56,9 +56,9 @@ function playGame() {
     }
 
     if(humanScore > computerScore){
-        console.log(`Human Score: ${humanScore}. Computer Score: ${computerScore}. Human won the game!`);
+        alert(`Human Score: ${humanScore}. Computer Score: ${computerScore}. Human won the game!`);
     } else {
-        console.log(`Human Score: ${humanScore}. Computer Score: ${computerScore}. Computer won the game!`);
+        alert(`Human Score: ${humanScore}. Computer Score: ${computerScore}. Computer won the game!`);
     }
 }
 

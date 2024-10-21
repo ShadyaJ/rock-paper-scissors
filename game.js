@@ -1,4 +1,4 @@
-const validChoices = ['ROCK', 'PAPER', 'SCISSORS'];
+const validChoices = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
     const randomNum = Math.floor(Math.random() * validChoices.length);
@@ -16,7 +16,7 @@ function getHumanChoice() {
             return null;
         }
 
-        userInput = userInput.toUpperCase();
+        userInput = userInput.toLowerCase();
 
         if (validChoices.includes(userInput)) {
             return userInput;
@@ -33,7 +33,7 @@ function playGame() {
     const playRound = (humanChoice, computerChoice) => {
         if(humanChoice === computerChoice) {
             alert(`Both chose ${humanChoice}. It\'s a tie! No one wins.`);
-        } else if((humanChoice == 'ROCK' && computerChoice == 'SCISSORS') || (humanChoice == 'PAPER' && computerChoice == 'ROCK') || (humanChoice == 'SCISSORS' && computerChoice == 'PAPER')) {
+        } else if((humanChoice == 'rock' && computerChoice == 'scissors') || (humanChoice == 'paper' && computerChoice == 'rock') || (humanChoice == 'scissors' && computerChoice == 'paper')) {
             alert(`Human chose ${humanChoice} and computer chose ${computerChoice}. Human wins!`);
             humanScore += 1;
         } else {
@@ -62,4 +62,4 @@ function playGame() {
     }
 }
 
-playGame();
+// playGame();

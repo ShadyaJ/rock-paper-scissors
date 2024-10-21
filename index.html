@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Rock-Paper-Scissors Game</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock - Paper - Scissors</h1>
-    <hr>
+    <header>
+        <nav id="main-nav">
+            <h1>The Rock - Paper - Scissors Game</h1>
+        </nav>
+    </header>
 
-    <div id="player-choices">
-        <button class="player-choice-btn" data-choice="rock">Rock</button>
-        <button class="player-choice-btn" data-choice="paper">Paper</button>
-        <button class="player-choice-btn" data-choice="scissors">Scissors</button>        
+    <div id="container">
+        <h2 id="game-info">Come on, don't be shy and play!</h2>
+        
+        <div class="player-choice-btns">
+            <button class="player-choice-btn" data-choice="rock"></button>
+            <button class="player-choice-btn" data-choice="paper"></button>
+            <button class="player-choice-btn" data-choice="scissors"></button>
+        </div>
+
+        <ul id="score-list">
+            <li>Player Score : <span id="player-score">0</span></li>
+            <li>Computer Score : <span id="computer-score">0</span></li>
+            <li>Draw : <span id="draw-score">0</span></li>
+        </ul>
     </div>
 
-    <h2 id="game-info">Come on don't be shy and play!</h2>
-
-    <h3>Score</h3>
-    <p>Player : <span id="player-score">0</span></p>
-    <p>Computer : <span id="computer-score">0</span></p>
-    <p>Draw : <span id="draw-score">0</span></p>
+    <footer>
+        <p>Made with ❤️ by <a href="https://github.com/ShadyaJ">ShadyaJ</a></p>
+    </footer>
 
     <script src="game.js"></script>
 </body>

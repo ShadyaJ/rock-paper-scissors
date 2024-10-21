@@ -21,11 +21,11 @@ function playRound(playerChoice, computerChoice) {
         document.querySelector('#draw-score').innerText = drawScore;
     } else if((playerChoice == 'rock' && computerChoice == 'scissors') || (playerChoice == 'paper' && computerChoice == 'rock') || (playerChoice == 'scissors' && computerChoice == 'paper')) {
         playerScore += 1;
-        gameInfo.innerText = `Human chose ${playerChoice} and computer chose ${computerChoice}. Human wins!`;
+        gameInfo.innerText = `You chose ${playerChoice} and computer chose ${computerChoice}. You win!`;
         document.querySelector('#player-score').innerText = playerScore;
     } else {
         computerScore += 1;
-        gameInfo.innerText = `Human chose ${playerChoice} and computer chose ${computerChoice}. Computer wins!`;
+        gameInfo.innerText = `You chose ${playerChoice} and computer chose ${computerChoice}. Computer wins!`;
         document.querySelector('#computer-score').innerText = computerScore;
     }
 
@@ -34,11 +34,15 @@ function playRound(playerChoice, computerChoice) {
 
 function checkScore() {
     if (playerScore >= 5) {
-        alert("Player wins the game!");
         endGame();
+        setTimeout(() => {
+            window.location.href = 'pages/win.html';
+        }, 2000);
     } else if (computerScore >= 5) {
-        alert("Computer wins the game!");
         endGame();
+        setTimeout(() => {
+            window.location.href = 'pages/lose.html';
+        }, 2000);
     }
 }
 
